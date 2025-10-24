@@ -18,8 +18,55 @@
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": ["./*"]
+  "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@Styles/*": [
+        "./src/styles/*"
+      ],
+      "@Animation/*": [
+        "./src/animation/*"
+      ],
+      "@Components/*": [
+        "./src/components/*"
+      ],
+      "@Modules/*": [
+        "./src/modules/*"
+      ],
+      "@Services/*": [
+        "./src/services/*"
+      ],
+      "@Contexts/*": [
+        "./src/contexts/*"
+      ],
+      "@Layout/*": [
+        "./src/layout/*"
+      ],
+      "@Hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@Constants/*": [
+        "./src/constants/*"
+      ],
+      "@Images/*": [
+        "./public/images/*"
+      ],
+      "@Public/*": [
+        "./public/*"
+      ],
+      "@Utils/*": [
+        "./src/utils/*"
+      ],
+      "@Motions/*": [
+        "./src/motions/*"
+      ],
+      "@Store/*": [
+        "./src/store/*"
+      ],
+      "@Interactive/*": [
+        "./src/interactive/*"
+      ]
     }
   },
   "include": [

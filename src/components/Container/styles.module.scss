@@ -1,0 +1,28 @@
+.container {
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+  --gap-x: #{rem(16px)};
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+    --gap-x: #{rem(20px)};
+  }
+  @include laptop {
+    padding-left: rem(40px);
+    padding-right: rem(40px);
+  }
+
+  &_grid {
+    width: 100%;
+    column-gap: var(--gap-x);
+    @include tablet {
+      column-gap: var(--gap-x);
+    }
+
+    @include laptop {
+      column-gap: rem(32px);
+    }
+  }
+}

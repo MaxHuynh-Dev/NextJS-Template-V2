@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  &_inner {
+    position: relative;
+    &_wrap {
+      position: relative;
+      padding-top: rem(30px);
+      padding-bottom: rem(30px);
+      display: flex;
+      z-index: 999;
+      justify-content: space-between;
+      align-items: center;
+      &_logo {
+        cursor: pointer;
+        &_txt {
+          transition-duration: 0.3s;
+        }
+      }
+      &_icon {
+        cursor: pointer;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: rem(10px);
+        &:hover {
+          .line_top {
+            transition-duration: 0.3s;
+            width: rem(65px);
+          }
+
+          .line_bottom {
+            transition-duration: 0.3s;
+            width: rem(45px);
+          }
+        }
+      }
+    }
+    &_line {
+      width: 100%;
+      height: 1px;
+      background-color: var(--gray);
+    }
+  }
+}

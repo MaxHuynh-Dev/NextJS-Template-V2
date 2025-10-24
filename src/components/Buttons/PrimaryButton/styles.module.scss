@@ -1,0 +1,51 @@
+.primaryButton {
+  --color-btn: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  label {
+    cursor: pointer;
+    text-box: trim-both cap alphabetic;
+  }
+  &_text {
+    color: var(--color-btn);
+    //&_small {
+    //  line-height: rem(24px); /* 150% */
+    //}
+    //&_large {
+    //  line-height: 140.1%; /* 33.624px */
+    //  letter-spacing: 0.3rem;
+    //}
+  }
+  &_small {
+    height: rem(48px);
+    padding: 0 rem(20px);
+  }
+  &_large {
+    padding: rem(15px) rem(30px);
+  }
+  &_solid {
+    &_dark {
+      background-color: var(--black);
+      --color-btn: var(--primary);
+    }
+    &_yellow {
+      background-color: var(--primary);
+      --color-btn: var(--black);
+    }
+  }
+  &_outline {
+    border: 1px solid var(--primary);
+    background-color: transparent;
+    &_dark {
+      border-color: var(--black);
+      --color-btn: var(--black);
+    }
+    &_yellow {
+      border-color: var(--primary);
+      --color-btn: var(--primary);
+    }
+  }
+}
