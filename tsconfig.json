@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,55 +18,23 @@
         "name": "next"
       }
     ],
-  "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@Styles/*": [
-        "./src/styles/*"
-      ],
-      "@Animation/*": [
-        "./src/animation/*"
-      ],
-      "@Components/*": [
-        "./src/components/*"
-      ],
-      "@Modules/*": [
-        "./src/modules/*"
-      ],
-      "@Services/*": [
-        "./src/services/*"
-      ],
-      "@Contexts/*": [
-        "./src/contexts/*"
-      ],
-      "@Layout/*": [
-        "./src/layout/*"
-      ],
-      "@Hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@Constants/*": [
-        "./src/constants/*"
-      ],
-      "@Images/*": [
-        "./public/images/*"
-      ],
-      "@Public/*": [
-        "./public/*"
-      ],
-      "@Utils/*": [
-        "./src/utils/*"
-      ],
-      "@Motions/*": [
-        "./src/motions/*"
-      ],
-      "@Store/*": [
-        "./src/store/*"
-      ],
-      "@Interactive/*": [
-        "./src/interactive/*"
-      ]
+    "paths": {
+      "@/*": ["./src/*"],
+      "@Styles/*": ["./src/styles/*"],
+      "@Animation/*": ["./src/animation/*"],
+      "@Components/*": ["./src/components/*"],
+      "@Modules/*": ["./src/modules/*"],
+      "@Services/*": ["./src/services/*"],
+      "@Contexts/*": ["./src/contexts/*"],
+      "@Layout/*": ["./src/layout/*"],
+      "@Hooks/*": ["./src/hooks/*"],
+      "@Constants/*": ["./src/constants/*"],
+      "@Images/*": ["./public/images/*"],
+      "@Public/*": ["./public/*"],
+      "@Utils/*": ["./src/utils/*"],
+      "@Motions/*": ["./src/motions/*"],
+      "@Store/*": ["./src/store/*"],
+      "@Interactive/*": ["./src/interactive/*"]
     }
   },
   "include": [

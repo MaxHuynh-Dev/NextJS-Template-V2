@@ -1,7 +1,7 @@
 import { Container } from '@Components/Container';
-import React from 'react';
-
 import s from './styles.module.scss';
+
+import React from 'react';
 
 function Footer(): React.JSX.Element {
   return (
