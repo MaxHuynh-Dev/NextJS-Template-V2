@@ -4,13 +4,13 @@ import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 
 interface ProviderProps {
-  children: ReactNode;
+	children: ReactNode;
 }
 
 export function Provider({ children }: ProviderProps) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="light">
-      {children}
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider attribute="class" defaultTheme="light">
+			{children}
+		</ThemeProvider>
+	);
 }

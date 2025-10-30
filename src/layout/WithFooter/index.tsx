@@ -1,15 +1,15 @@
-import React from 'react';
-import Footer from '@Layout/Footer';
+import Footer from "@Layout/Footer";
+import type React from "react";
 
 export default function WithFooter({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }): React.ReactElement {
-  return (
-    <>
-      {children}
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			{children}
+			<Footer />
+		</>
+	);
 }

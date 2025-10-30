@@ -1,9 +1,9 @@
-import React from 'react';
+import type React from "react";
 
 export default function WithoutFooter({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }): React.ReactElement {
-  return <>{children}</>;
+	return <>{children}</>;
 }

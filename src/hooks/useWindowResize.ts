@@ -1,100 +1,106 @@
-'use client';
+"use client";
 
-import { useGSAP } from '@gsap/react';
-import { Signal, useComputed, useSignal, useSignalEffect } from '@preact/signals-react';
-import { useEffect, useState } from 'react';
-import { useDebounceCallback } from 'usehooks-ts';
+import { useGSAP } from "@gsap/react";
+import {
+	type Signal,
+	useComputed,
+	useSignal,
+	useSignalEffect,
+} from "@preact/signals-react";
+import { useEffect, useState } from "react";
+import { useDebounceCallback } from "usehooks-ts";
 
 interface IDimension {
-  width: Signal<number>;
-  height: Signal<number>;
-  isMobile: Signal<boolean>;
-  isTablet: Signal<boolean>;
-  isDesktop: Signal<boolean>;
-  scrollHeight: Signal<number>;
+	width: Signal<number>;
+	height: Signal<number>;
+	isMobile: Signal<boolean>;
+	isTablet: Signal<boolean>;
+	isDesktop: Signal<boolean>;
+	scrollHeight: Signal<number>;
 }
 
 const useWindowResize = (): IDimension => {
-  const width = useSignal(0);
-  const height = useSignal(0);
-  const scrollHeight = useSignal(0);
+	const width = useSignal(0);
+	const height = useSignal(0);
+	const scrollHeight = useSignal(0);
 
-  const listener = (): void => {
-    width.value = window.innerWidth || document.body.clientWidth || 0;
-    height.value = window.innerHeight || document.body.clientHeight || 0;
-    scrollHeight.value = document.body.scrollHeight;
-  };
+	const listener = (): void => {
+		width.value = window.innerWidth || document.body.clientWidth || 0;
+		height.value = window.innerHeight || document.body.clientHeight || 0;
+		scrollHeight.value = document.body.scrollHeight;
+	};
 
-  useGSAP(() => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const resizeObserver = new ResizeObserver((_entries) => {
-      scrollHeight.value = document.body.scrollHeight;
-    });
+	useGSAP(() => {
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		const resizeObserver = new ResizeObserver((_entries) => {
+			scrollHeight.value = document.body.scrollHeight;
+		});
 
-    resizeObserver.observe(document.body);
-    return () => {
-      resizeObserver.unobserve(document.body);
-      resizeObserver.disconnect();
-    };
-  });
+		resizeObserver.observe(document.body);
+		return () => {
+			resizeObserver.unobserve(document.body);
+			resizeObserver.disconnect();
+		};
+	});
 
-  const deBounceListener = useDebounceCallback(listener, 150);
-  useEffect(() => {
-    deBounceListener();
-    window?.addEventListener?.('resize', deBounceListener);
-    return () => {
-      window?.removeEventListener?.('resize', deBounceListener);
-    };
-  }, []);
+	const deBounceListener = useDebounceCallback(listener, 150);
 
-  const isMobile = useComputed(() => {
-    return width.value < 768;
-  });
+	useEffect(() => {
+		deBounceListener();
+		window?.addEventListener?.("resize", deBounceListener);
+		return () => {
+			window?.removeEventListener?.("resize", deBounceListener);
+		};
+	}, [deBounceListener]);
 
-  const isTablet = useComputed(() => {
-    return width.value >= 768 && width.value < 1199;
-  });
+	const isMobile = useComputed(() => {
+		return width.value < 768;
+	});
 
-  const isDesktop = useComputed(() => {
-    return width.value >= 1200;
-  });
-  return {
-    width,
-    height,
-    isMobile,
-    isTablet,
-    isDesktop,
-    scrollHeight,
-  };
+	const isTablet = useComputed(() => {
+		return width.value >= 768 && width.value < 1199;
+	});
+
+	const isDesktop = useComputed(() => {
+		return width.value >= 1200;
+	});
+	return {
+		width,
+		height,
+		isMobile,
+		isTablet,
+		isDesktop,
+		scrollHeight,
+	};
 };
 
 export const useIsMobile = (): boolean => {
-  const [is, setIs] = useState<boolean>(false);
-  const { isMobile } = useWindowResize();
-  useSignalEffect((): void => {
-    setIs(isMobile.value);
-  });
+	const [is, setIs] = useState<boolean>(false);
+	const { isMobile } = useWindowResize();
+	useSignalEffect((): void => {
+		setIs(isMobile.value);
+	});
 
-  return is;
+	return is;
 };
 
 export const useIsDesktop = (): boolean => {
-  const [is, setIs] = useState<boolean>(false);
-  const { isDesktop } = useWindowResize();
-  useSignalEffect((): void => {
-    setIs(isDesktop.value);
-  });
-  return is;
+	const [is, setIs] = useState<boolean>(false);
+	const { isDesktop } = useWindowResize();
+	useSignalEffect((): void => {
+		setIs(isDesktop.value);
+	});
+	return is;
 };
 
 export const useIsTablet = (): boolean => {
-  const [is, setIs] = useState<boolean>(false);
-  const { isTablet } = useWindowResize();
-  useSignalEffect((): void => {
-    setIs(isTablet.value);
-  });
+	const [is, setIs] = useState<boolean>(false);
+	const { isTablet } = useWindowResize();
+	useSignalEffect((): void => {
+		setIs(isTablet.value);
+	});
 
-  return is;
+	return is;
 };
 
 export default useWindowResize;

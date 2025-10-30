@@ -1,4 +1,4 @@
-@use "tool" as *;
+@use 'tool' as *;
 
 * {
   margin: 0;
@@ -126,6 +126,7 @@ body {
   font-family: var(--font-PPNeueMontreal);
   background-color: var(--main-background);
   color: var(--white);
+  font-size: vw(10px, 1920px);
 
   ::-webkit-scrollbar {
     display: none;
@@ -141,7 +142,7 @@ video::-webkit-media-controls {
   display: none;
 }
 
-img:is([loading="lazy"]) {
+img:is([loading='lazy']) {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -149,6 +150,7 @@ img:is([loading="lazy"]) {
 body {
   line-height: 110%;
   font-weight: normal;
+  color: #000;
   background-color: var(--dark-grey);
   transition: background-color 0.4s var(--easeInOutQuart);
 }

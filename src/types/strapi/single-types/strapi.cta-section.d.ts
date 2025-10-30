@@ -1,6 +1,6 @@
 type StrapiCTASection = {
-  title: string;
-  description: string;
-  button: StrapiAnchor;
-  background: StrapiMedia;
+	title: string;
+	description: string;
+	button: StrapiAnchor;
+	background: StrapiMedia;
 };

@@ -1,11 +1,11 @@
 type StrapiHeroWithImageSection = {
-  title: string;
-  description: string;
-  image: StrapiMedia;
+	title: string;
+	description: string;
+	image: StrapiMedia;
 };
 
 type StrapiHeroWithVimeoSection = {
-  title: string;
-  description: string;
-  vimeoLink: string;
+	title: string;
+	description: string;
+	vimeoLink: string;
 };

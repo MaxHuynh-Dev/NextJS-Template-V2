@@ -1,7 +1,7 @@
 type StrapiMenu = {
-  links: StrapiAnchor[];
+	links: StrapiAnchor[];
 };
 
 type StrapiSocial = {
-  links: StrapiAnchor[];
+	links: StrapiAnchor[];
 };

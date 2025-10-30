@@ -1,9 +1,12 @@
-import React from "react";
+import type React from "react";
+import s from "./header.module.scss";
 
-import s from "./styles.module.scss";
-
-function Header(): React.JSX.Element {
-  return <div className={s.header}></div>;
+function Header(): React.ReactElement {
+	return (
+		<div className={s.header}>
+			<h1>Header</h1>
+		</div>
+	);
 }
 
 export default Header;

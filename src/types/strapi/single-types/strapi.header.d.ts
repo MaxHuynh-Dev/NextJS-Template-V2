@@ -1,4 +1,4 @@
 type StrapiHeader = {
-  logoWhite: StrapiMedia;
-  logoDark: StrapiMedia;
+	logoWhite: StrapiMedia;
+	logoDark: StrapiMedia;
 };

@@ -1,7 +1,7 @@
 type StrapiFooter = {
-  address: string;
-  email: string;
-  copyrightText: string;
-  phoneNumber: string;
-  privacyPolicy: StrapiAnchor;
+	address: string;
+	email: string;
+	copyrightText: string;
+	phoneNumber: string;
+	privacyPolicy: StrapiAnchor;
 };
