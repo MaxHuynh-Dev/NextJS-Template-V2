@@ -1,10 +1,6 @@
 @use "tool" as *;
 
 :root {
-  --grid-gap-mobile-x: #{rem(16px)};
-
-  --grid-gap-x: #{rem(24px)};
-
   --white: #ffffff;
   --dark: #000000;
   --black: #000000;

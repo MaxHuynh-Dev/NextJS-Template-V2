@@ -1,8 +1,7 @@
 import Label from "@Components/Typo/Label";
+import { TypoColor, TypoTagLabel } from "@Enums/typo";
 import cn from "classnames";
 import type React from "react";
-
-import { TypoColor, TypoTagLabel } from "@/enums/typo";
 
 import s from "./styles.module.scss";
 

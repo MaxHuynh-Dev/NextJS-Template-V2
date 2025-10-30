@@ -1,5 +1,3 @@
-import cn from "classnames";
-import type React from "react";
 import {
 	FontWeight,
 	TypoColor,
@@ -7,7 +5,9 @@ import {
 	type TypoTagLabel,
 	type TypoTagParagraph,
 	TypoTransform,
-} from "@/enums/typo";
+} from "@Enums/typo";
+import cn from "classnames";
+import type React from "react";
 
 export interface BaseTextProps {
 	as: TypoTagHeading | TypoTagParagraph | TypoTagLabel;
