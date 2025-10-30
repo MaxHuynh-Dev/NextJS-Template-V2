@@ -7,18 +7,21 @@ export enum TypoColor {
 }
 
 export enum FontWeight {
-	light = "light", // 300
-	normal = "normal", // 400
-	medium = "medium", // 500
-	semibold = "semibold", // 600
-	bold = "bold", // 700
-	extrabold = "extrabold", // 800
+	thin = "100", // 100
+	extraLight = "200", // 200
+	light = "300", // 300
+	regular = "400", // 400
+	medium = "500", // 500
+	semiBold = "600", // 600
+	bold = "700", // 700
+	extraBold = "800", // 800
 }
 
 export enum TypoTransform {
 	uppercase = "uppercase",
 	lowercase = "lowercase",
 	capitalize = "capitalize",
+	none = "none",
 }
 
 export enum TypoTagHeading {

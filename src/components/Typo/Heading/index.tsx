@@ -1,53 +1,47 @@
 import cn from "classnames";
 import type React from "react";
 
-import { type FontWeight, TypoColor, TypoTagHeading } from "@/enums/typo";
+import {
+	FontWeight,
+	TypoColor,
+	TypoTagHeading,
+	TypoTransform,
+} from "@/enums/typo";
+import { BaseText, type BaseTextProps } from "../Base";
 import styles from "./styles.module.scss";
 
-interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
-	size?: 25 | 30 | 60 | 64 | 72 | 85 | 88 | 250;
-	as?: TypoTagHeading;
-	ref?: React.Ref<HTMLHeadingElement>;
-	color?: TypoColor;
-	fontWeight?: FontWeight;
-}
+type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> &
+	BaseTextProps & {
+		size?: 25 | 30 | 60 | 64 | 72 | 85 | 88 | 250;
+		as?: TypoTagHeading;
+		ref?: React.Ref<HTMLHeadingElement>;
+	};
 
 const Heading = ({ ...props }: HeadingProps): React.JSX.Element => {
 	const {
-		ref,
 		color = TypoColor.black,
 		size = 72,
 		as = TypoTagHeading.h1,
-		fontWeight,
+		fontWeight = FontWeight.regular,
+		textTransform = TypoTransform.none,
 		children,
 		className,
-		style,
 		...restProps
 	} = props;
 
-	const textClassNames = cn(
-		styles.text,
-		styles[`text__${size}`],
-		`text__${color}`,
-		className,
-	);
-
-	const Component = as;
-
-	const inlineStyle = {
-		...(fontWeight !== undefined && { fontWeight }),
-		...style,
-	};
+	const textClassNames = cn(styles.text, styles[`text__${size}`], className);
 
 	return (
-		<Component
-			{...restProps}
-			ref={ref}
-			style={inlineStyle}
+		<BaseText
+			as={as}
+			color={color}
+			fontWeight={fontWeight}
+			textTransform={textTransform}
 			className={textClassNames}
+			{...restProps}
 		>
 			{children}
-		</Component>
+		</BaseText>
 	);
 };
 
