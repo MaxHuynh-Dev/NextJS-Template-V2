@@ -10,20 +10,6 @@ $color-debug: #ff6b4c;
   transform: translate(-50%, 0);
   z-index: 99999999999;
 
-  .grid_container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(8, 1fr);
-    }
-
-    @media (min-width: 1200px) {
-      grid-template-columns: repeat(12, 1fr);
-    }
-  }
-
   .grid_column {
     grid-column: span 1;
   }

@@ -34,7 +34,8 @@
       "@Utils/*": ["./src/utils/*"],
       "@Motions/*": ["./src/motions/*"],
       "@Store/*": ["./src/store/*"],
-      "@Interactive/*": ["./src/interactive/*"]
+      "@Interactive/*": ["./src/interactive/*"],
+      "@Enums/*": ["./src/enums/*"]
     }
   },
   "include": [

@@ -19,15 +19,5 @@ export const GridContainer = ({
 	children,
 	className,
 }: Props): React.JSX.Element => {
-	return (
-		<div
-			className={cn(
-				"grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12",
-				s.container_grid,
-				className,
-			)}
-		>
-			{children}
-		</div>
-	);
+	return <div className={cn(s.container_grid, className)}>{children}</div>;
 };

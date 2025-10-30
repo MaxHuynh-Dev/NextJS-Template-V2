@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@Components/Container";
+import { Container, GridContainer } from "@Components/Container";
 import cn from "classnames";
 import type React from "react";
 import { useCallback, useEffect, useState } from "react";
@@ -41,11 +41,11 @@ export default function GridDebug(): React.ReactElement {
 	return (
 		<div className={cn(s.gridDebug, !isGrid && s.hidden)}>
 			<Container>
-				<div className={s.grid_container}>
+				<GridContainer>
 					{Array.from({ length: 12 }).map((_, index) => (
 						<GridColumn key={`grid-column-${index.toString()}`} />
 					))}
-				</div>
+				</GridContainer>
 			</Container>
 		</div>
 	);
