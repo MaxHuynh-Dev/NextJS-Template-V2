@@ -1,9 +1,16 @@
 import cn from "classnames";
 import type React from "react";
-import { FontWeight, TypoColor, TypoTransform } from "@/enums/typo";
+import {
+	FontWeight,
+	TypoColor,
+	type TypoTagHeading,
+	type TypoTagLabel,
+	type TypoTagParagraph,
+	TypoTransform,
+} from "@/enums/typo";
 
 export interface BaseTextProps {
-	as: React.ElementType;
+	as: TypoTagHeading | TypoTagParagraph | TypoTagLabel;
 	children: React.ReactNode;
 	className?: string;
 	color?: TypoColor;
