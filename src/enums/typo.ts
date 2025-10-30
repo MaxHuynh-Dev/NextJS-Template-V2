@@ -1,5 +1,3 @@
-import type { PropsWithChildren } from "react";
-
 export enum TypoColor {
 	white = "white",
 	black = "black",
@@ -7,14 +5,14 @@ export enum TypoColor {
 }
 
 export enum FontWeight {
-	thin = "100", // 100
-	extraLight = "200", // 200
-	light = "300", // 300
-	regular = "400", // 400
-	medium = "500", // 500
-	semiBold = "600", // 600
-	bold = "700", // 700
-	extraBold = "800", // 800
+	thin = "100", // thin
+	extraLight = "200", // extra light
+	light = "300", // light
+	regular = "400", // regular
+	medium = "500", // medium
+	semiBold = "600", // semi bold
+	bold = "700", // bold
+	extraBold = "800", // extra bold
 }
 
 export enum TypoTransform {
@@ -55,11 +53,3 @@ export type TypoElement =
 	| HTMLDivElement
 	| HTMLLabelElement
 	| HTMLAnchorElement;
-
-export type TextPropsBase = PropsWithChildren & {
-	className?: string;
-	color?: TypoColor;
-	weight?: FontWeight;
-	transform?: TypoTransform;
-	font?: TypoFontFamily;
-};

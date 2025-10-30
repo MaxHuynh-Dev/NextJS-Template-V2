@@ -1,6 +1,7 @@
 import {
 	FontWeight,
 	TypoColor,
+	TypoFontFamily,
 	type TypoTagHeading,
 	type TypoTagLabel,
 	type TypoTagParagraph,
@@ -15,6 +16,7 @@ export interface BaseTextProps {
 	className?: string;
 	color?: TypoColor;
 	fontWeight?: FontWeight;
+	fontFamily?: TypoFontFamily;
 	textTransform?: TypoTransform;
 	fontSize?: string;
 }
@@ -25,6 +27,7 @@ export const BaseText: React.FC<BaseTextProps> = ({ ...props }) => {
 		color = TypoColor.black,
 		fontWeight = FontWeight.regular,
 		textTransform = TypoTransform.none,
+		fontFamily = TypoFontFamily.genist_sans,
 		children,
 		className,
 		...rest
@@ -34,6 +37,7 @@ export const BaseText: React.FC<BaseTextProps> = ({ ...props }) => {
 		`text__${color}`,
 		`font-weight__${fontWeight}`,
 		`text-transform__${textTransform}`,
+		`font__${fontFamily}`,
 		className,
 	);
 
