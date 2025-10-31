@@ -16,6 +16,7 @@
     "@gsap/react": "^2.1.2",
     "@preact/signals-react": "^3.3.1",
     "autoprefixer": "^10.4.21",
+    "axios": "^1.13.1",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.18",
