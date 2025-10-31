@@ -29,6 +29,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-inlinesvg": "^4.2.0",
+    "react-scan": "^0.4.3",
     "sass": "^1.93.2",
     "usehooks-ts": "^3.1.1"
   },
