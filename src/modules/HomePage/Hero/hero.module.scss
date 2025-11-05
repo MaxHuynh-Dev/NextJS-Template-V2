@@ -26,6 +26,15 @@
     justify-content: flex-end;
     align-items: flex-start;
     padding-bottom: 8rem;
+
+    &_inner {
+      &_bottom {
+        display: flex;
+        gap: rem(349px);
+        align-items: center;
+        margin-top: rem(71px);
+      }
+    }
   }
 
   &_heading {

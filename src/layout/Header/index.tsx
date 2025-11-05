@@ -26,7 +26,7 @@ function Header(): React.ReactElement {
 								<Link href={item.href}>
 									<Label
 										as={TypoTagLabel.span}
-										size={16}
+										size={18}
 										color={TypoColor.vani}
 										textTransform={TypoTransform.uppercase}
 									>
