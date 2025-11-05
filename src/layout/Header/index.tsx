@@ -16,8 +16,8 @@ function Header(): React.ReactElement {
 						<ImagePlaceHolder
 							src="/images/logo.png"
 							alt="Logo"
-							width={100}
-							height={100}
+							width={148}
+							height={63}
 						/>
 					</div>
 					<ul className={s.header_menu}>
