@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> &
 	BaseTextProps & {
-		size?: 25 | 30 | 60 | 64 | 72 | 85 | 88 | 250;
+		size?: 25 | 30 | 60 | 64 | 72 | 85 | 88 | 250 | 130;
 		as?: TypoTagHeading;
 		ref?: React.Ref<HTMLHeadingElement>;
 	};

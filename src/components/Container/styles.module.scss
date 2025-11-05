@@ -8,8 +8,8 @@
     padding-right: rem(32px);
   }
   @include laptop {
-    padding-left: rem(40px);
-    padding-right: rem(40px);
+    padding-left: rem(50px);
+    padding-right: rem(50px);
   }
 
   &_grid {
@@ -24,7 +24,7 @@
 
     @include laptop {
       grid-template-columns: repeat(12, 1fr);
-      column-gap: rem(32px);
+      column-gap: rem(24px);
     }
   }
 }

@@ -1,10 +1,10 @@
 // Font family will init new project
-.font__geist-sans {
-  font-family: var(--font-geist-sans);
+.font__inter {
+  font-family: var(--font-inter);
 }
 
-.font__geist-mono {
-  font-family: var(--font-geist-mono);
+.font__raleway {
+  font-family: var(--font-raleway);
 }
 
 // Text color when init new project
@@ -18,6 +18,10 @@
 
 .text__blue {
   color: var(--blue);
+}
+
+.text__vani {
+  color: var(--vani);
 }
 
 // Font weight when init new project

@@ -27,7 +27,7 @@ export const BaseText: React.FC<BaseTextProps> = ({ ...props }) => {
 		color = TypoColor.black,
 		fontWeight = FontWeight.regular,
 		textTransform = TypoTransform.none,
-		fontFamily = TypoFontFamily.genist_sans,
+		fontFamily = TypoFontFamily.inter,
 		children,
 		className,
 		...rest

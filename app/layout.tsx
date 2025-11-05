@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@Constants/fonts";
+import { inter, raleway } from "@Constants/fonts";
 import MainLayout from "@Layout/MainLayout";
 import "@Styles/app.scss";
 import { uiHelper } from "@Utils/uiHelper";
@@ -28,7 +28,7 @@ export default function RootLayout({
 					<Script src="https://unpkg.com/react-scan/dist/auto.global.js"></Script>
 				)}
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
+			<body className={`${inter.variable} ${raleway.variable}`}>
 				<MainLayout>{children}</MainLayout>
 			</body>
 		</html>

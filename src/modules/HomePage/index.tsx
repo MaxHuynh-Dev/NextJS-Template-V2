@@ -1,16 +1,8 @@
-import { Container } from "@Components/Container";
-import Heading from "@Components/Typo/Heading";
-import { FontWeight, TypoTagHeading } from "@Enums/typo";
+import Hero from "@Modules/HomePage/Hero";
 import type React from "react";
 
 function HomePage(): React.ReactElement {
-	return (
-		<Container>
-			<Heading as={TypoTagHeading.h1} size={72} fontWeight={FontWeight.bold}>
-				HomePage
-			</Heading>
-		</Container>
-	);
+	return <Hero />;
 }
 
 export default HomePage;

@@ -2,6 +2,7 @@ export enum TypoColor {
 	white = "white",
 	black = "black",
 	blue = "blue",
+	vani = "vani",
 }
 
 export enum FontWeight {
@@ -42,8 +43,8 @@ export enum TypoTagLabel {
 }
 
 export enum TypoFontFamily {
-	genist_sans = "geist-sans",
-	genist_mono = "geist-mono",
+	inter = "inter",
+	raleway = "raleway",
 }
 
 export type TypoElement =
