@@ -97,7 +97,6 @@ ul {
 
 html {
   box-sizing: border-box;
-  background-color: var(--white);
   font-size: 10px;
   @include tablet {
     font-size: vw(10px, 810px);
@@ -125,7 +124,7 @@ body {
   overscroll-behavior-y: none !important;
   min-height: -webkit-fill-available;
   font-family: var(--font-inter);
-  background-color: var(--main-background);
+  background-color: var(--bg-background);
   color: var(--white);
   font-size: vw(10px);
 

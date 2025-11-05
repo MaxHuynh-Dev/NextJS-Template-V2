@@ -27,6 +27,12 @@
     }
   }
 
+  &__22 {
+    @include laptop {
+      font-size: rem(22px);
+    }
+  }
+
   &__24 {
     @include laptop {
       font-size: rem(24px);

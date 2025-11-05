@@ -6,7 +6,7 @@ import styles from "./styles.module.scss";
 
 type LabelProps = React.HTMLAttributes<HTMLLabelElement> &
 	BaseTextProps & {
-		size?: 200 | 64 | 28 | 24 | 20 | 18 | 17 | 16 | 14 | 12 | 13;
+		size?: 200 | 64 | 28 | 22 | 24 | 20 | 18 | 17 | 16 | 14 | 12 | 13;
 		as?: TypoTagLabel;
 		ref?: React.Ref<HTMLLabelElement>;
 	};

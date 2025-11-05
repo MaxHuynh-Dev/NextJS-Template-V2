@@ -1,51 +1,32 @@
 .primaryButton {
-  --color-btn: var(--primary);
+  --color-btn: var(--vani);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 40px;
+  gap: rem(10px);
+  background-color: transparent;
   label {
+    color: var(--color-btn);
     cursor: pointer;
     text-box: trim-both cap alphabetic;
   }
   &_text {
     color: var(--color-btn);
-    //&_small {
-    //  line-height: rem(24px); /* 150% */
-    //}
-    //&_large {
-    //  line-height: 140.1%; /* 33.624px */
-    //  letter-spacing: 0.3rem;
-    //}
+    padding-bottom: rem(7px);
+    border-bottom: 2px solid currentColor;
   }
-  &_small {
-    height: rem(48px);
-    padding: 0 rem(20px);
-  }
-  &_large {
-    padding: rem(15px) rem(30px);
-  }
-  &_solid {
-    &_dark {
-      background-color: var(--black);
-      --color-btn: var(--primary);
-    }
-    &_yellow {
-      background-color: var(--primary);
-      --color-btn: var(--black);
-    }
-  }
-  &_outline {
-    border: 1px solid var(--primary);
-    background-color: transparent;
-    &_dark {
-      border-color: var(--black);
-      --color-btn: var(--black);
-    }
-    &_yellow {
-      border-color: var(--primary);
-      --color-btn: var(--primary);
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(50px);
+    height: rem(50px);
+    background-color: var(--color-btn);
+    border-radius: 50%;
+    & svg {
+      width: rem(17px);
+      height: rem(17px);
     }
   }
 }

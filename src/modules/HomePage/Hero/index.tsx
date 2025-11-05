@@ -49,7 +49,7 @@ function Hero(): React.ReactElement {
 							For more than 30 years, we've been <br /> bringing projects to
 							life around the world.
 						</Paragraph>
-						<PrimaryButton text="View Projects" size="large" />
+						<PrimaryButton text="Explore our work" />
 					</div>
 				</div>
 			</Container>
