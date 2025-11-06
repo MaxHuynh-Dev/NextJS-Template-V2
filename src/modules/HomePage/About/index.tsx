@@ -6,11 +6,13 @@ import {
 	TypoColor,
 	TypoFontFamily,
 	TypoTagHeading,
+	TypoTagLabel,
 	TypoTagParagraph,
 	TypoTransform,
 } from "@Enums/typo";
 import type React from "react";
 import ImagePlaceHolder from "@/components/ImagePlaceHolder";
+import Label from "@/components/Typo/Label";
 import styles from "./about.module.scss";
 
 function About(): React.ReactElement {
@@ -65,6 +67,84 @@ function About(): React.ReactElement {
 							the system of "ideas and implementation." Our team consists of
 							architects, designers and engineers from different areas.
 						</Paragraph>
+						<div className={styles.about_right_items}>
+							<div className={styles.about_right_items_item}>
+								<Label
+									as={TypoTagLabel.span}
+									size={60}
+									fontWeight={FontWeight.semiBold}
+									color={TypoColor.vani}
+								>
+									286
+								</Label>
+								<Label
+									as={TypoTagLabel.label}
+									size={20}
+									textTransform={TypoTransform.uppercase}
+									fontWeight={FontWeight.regular}
+									color={TypoColor.vani}
+								>
+									Unique Projects Finished
+								</Label>
+							</div>
+							<div className={styles.about_right_items_item}>
+								<Label
+									as={TypoTagLabel.span}
+									size={60}
+									fontWeight={FontWeight.semiBold}
+									color={TypoColor.vani}
+								>
+									139
+								</Label>
+								<Label
+									as={TypoTagLabel.label}
+									size={20}
+									textTransform={TypoTransform.uppercase}
+									fontWeight={FontWeight.regular}
+									color={TypoColor.vani}
+								>
+									Projects in Progress
+								</Label>
+							</div>
+							<div className={styles.about_right_items_item}>
+								<Label
+									as={TypoTagLabel.span}
+									size={60}
+									fontWeight={FontWeight.semiBold}
+									color={TypoColor.vani}
+								>
+									16
+								</Label>
+								<Label
+									as={TypoTagLabel.label}
+									size={20}
+									textTransform={TypoTransform.uppercase}
+									fontWeight={FontWeight.regular}
+									color={TypoColor.vani}
+								>
+									Achievements
+								</Label>
+							</div>
+							<div className={styles.about_right_items_item}>
+								<Label
+									as={TypoTagLabel.span}
+									size={60}
+									fontWeight={FontWeight.semiBold}
+									color={TypoColor.vani}
+								>
+									13
+								</Label>
+								<Label
+									as={TypoTagLabel.label}
+									size={20}
+									textTransform={TypoTransform.uppercase}
+									fontWeight={FontWeight.regular}
+									color={TypoColor.vani}
+								>
+									Countries that We Operate In
+								</Label>
+							</div>
+						</div>
 					</div>
 				</GridContainer>
 			</Container>
