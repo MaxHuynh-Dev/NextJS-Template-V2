@@ -1,5 +1,7 @@
 import { Container, GridContainer } from "@Components/Container";
+import ImagePlaceHolder from "@Components/ImagePlaceHolder";
 import Heading from "@Components/Typo/Heading";
+import Label from "@Components/Typo/Label";
 import Paragraph from "@Components/Typo/Paragraph";
 import {
 	FontWeight,
@@ -11,8 +13,6 @@ import {
 	TypoTransform,
 } from "@Enums/typo";
 import type React from "react";
-import ImagePlaceHolder from "@/components/ImagePlaceHolder";
-import Label from "@/components/Typo/Label";
 import styles from "./about.module.scss";
 
 function About(): React.ReactElement {
@@ -96,6 +96,7 @@ function About(): React.ReactElement {
 								>
 									139
 								</Label>
+
 								<Label
 									as={TypoTagLabel.label}
 									size={20}
