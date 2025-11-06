@@ -1,0 +1,19 @@
+.itemOffer {
+  border-top: 1px solid var(--dark-grey);
+  padding-block: rem(45px);
+
+  &_header {
+    position: relative;
+    display: inline-block;
+  }
+
+  &_title {
+    text-box: trim-both cap alphabetic;
+  }
+
+  &_number {
+    position: absolute;
+    top: 0.2rem;
+    right: -3rem;
+  }
+}

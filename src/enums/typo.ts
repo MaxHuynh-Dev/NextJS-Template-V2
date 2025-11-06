@@ -3,6 +3,7 @@ export enum TypoColor {
 	black = "black",
 	blue = "blue",
 	vani = "vani",
+	dark_grey = "dark-grey",
 }
 
 export enum FontWeight {

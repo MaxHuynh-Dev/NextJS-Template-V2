@@ -26,7 +26,18 @@ function Offer(): React.ReactElement {
 					we offer
 				</Heading>
 				<div className={styles.offer_items}>
-					<ItemOffer />
+					<ItemOffer title="DESIGN OF HOUSES" image="image" number={12} />
+					<ItemOffer title="INTERIOR DESIGN" image="image" number={47} />
+					<ItemOffer
+						title="DESIGN OF PUBLIC OBJECTS"
+						image="image"
+						number={18}
+					/>
+					<ItemOffer
+						title="DESIGN OF PUBLIC INTERIOR"
+						image="image"
+						number={24}
+					/>
 				</div>
 			</Container>
 		</div>
