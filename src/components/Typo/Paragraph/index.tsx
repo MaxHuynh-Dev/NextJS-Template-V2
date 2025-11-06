@@ -8,7 +8,7 @@ type ParagraphProps = React.HTMLAttributes<
 	HTMLDivElement | HTMLParagraphElement
 > &
 	BaseTextProps & {
-		size?: 48 | 36 | 30 | 24 | 16 | 18;
+		size?: 48 | 36 | 30 | 24 | 16 | 18 | 20;
 		as?: TypoTagParagraph;
 		ref?: React.Ref<HTMLDivElement | HTMLParagraphElement>;
 	};
