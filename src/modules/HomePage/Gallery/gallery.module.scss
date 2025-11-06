@@ -1,5 +1,5 @@
 .gallery {
-  padding-top: rem(75px);
+  padding-top: var(--spacing-section);
   padding-left: rem(50px);
   &_left {
     grid-column: span 6;

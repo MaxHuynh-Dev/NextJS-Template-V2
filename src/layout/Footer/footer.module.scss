@@ -1,5 +1,5 @@
 .footer {
-  padding-top: rem(60px);
+  padding-top: var(--spacing-section);
   padding-bottom: rem(47px);
   &_left {
     display: flex;

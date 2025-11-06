@@ -1,7 +1,7 @@
 .itemOffer {
   border-top: 1px solid var(--dark-grey);
   padding-block: rem(45px);
-
+  position: relative;
   &_header {
     position: relative;
     display: inline-block;
@@ -15,5 +15,17 @@
     position: absolute;
     top: 0.2rem;
     right: -3rem;
+  }
+
+  &_image {
+    width: rem(230px);
+    position: absolute;
+    top: 50%;
+    right: 10rem;
+    transform: translateY(-50%);
+    & img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
