@@ -2,12 +2,24 @@
   border-top: 1px solid var(--dark-grey);
   padding-block: rem(45px);
   position: relative;
+  cursor: pointer;
   &_header {
     position: relative;
     display: inline-block;
   }
-
+  &:hover {
+    .itemOffer_image {
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    .itemOffer_title {
+      color: var(--vani);
+    }
+    .itemOffer_number {
+      color: var(--vani);
+    }
+  }
   &_title {
+    transition: color 0.2s ease-in-out;
     text-box: trim-both cap alphabetic;
   }
 
@@ -15,6 +27,7 @@
     position: absolute;
     top: 0.2rem;
     right: -3rem;
+    transition: color 0.2s ease-in-out;
   }
 
   &_image {
@@ -23,6 +36,9 @@
     top: 50%;
     right: 10rem;
     transform: translateY(-50%);
+    z-index: 3;
+    clip-path: polygon(100% 50%, 0 50%, 0 50%, 100% 50%);
+    transition: clip-path 0.2s linear;
     & img {
       width: 100%;
       height: auto;

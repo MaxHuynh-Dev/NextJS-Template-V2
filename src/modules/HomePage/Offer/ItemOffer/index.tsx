@@ -41,12 +41,7 @@ function ItemOffer({ title, image, number }: TItemOffer): React.ReactElement {
 				</Label>
 			</div>
 			<div className={styles.itemOffer_image}>
-				<ImagePlaceHolder
-					src="https://images.unsplash.com/photo-1632935187086-49a9d8027292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1322"
-					alt="Offer"
-					width={1000}
-					height={1000}
-				/>
+				<ImagePlaceHolder src={image} alt="Offer" width={1000} height={1000} />
 			</div>
 		</div>
 	);

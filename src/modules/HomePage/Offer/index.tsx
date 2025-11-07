@@ -26,16 +26,24 @@ function Offer(): React.ReactElement {
 					we offer
 				</Heading>
 				<div className={styles.offer_items}>
-					<ItemOffer title="DESIGN OF HOUSES" image="image" number={12} />
-					<ItemOffer title="INTERIOR DESIGN" image="image" number={47} />
+					<ItemOffer
+						title="DESIGN OF HOUSES"
+						image="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287"
+						number={12}
+					/>
+					<ItemOffer
+						title="INTERIOR DESIGN"
+						image="https://images.unsplash.com/photo-1632935187086-49a9d8027292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1322"
+						number={47}
+					/>
 					<ItemOffer
 						title="DESIGN OF PUBLIC OBJECTS"
-						image="image"
+						image="https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1365"
 						number={18}
 					/>
 					<ItemOffer
 						title="DESIGN OF PUBLIC INTERIOR"
-						image="image"
+						image="https://images.unsplash.com/photo-1579656592043-a20e25a4aa4b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1287"
 						number={24}
 					/>
 				</div>
