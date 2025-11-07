@@ -20,7 +20,7 @@ function Preloader(): React.ReactElement {
 		const timer = setTimeout(() => {
 			pageStatus.value = PageStatus.ENTERED;
 			if (ref.current) {
-				ref.current.style.display = "none";
+				ref.current.style.opacity = "0";
 			}
 		}, 2000);
 
