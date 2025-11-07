@@ -49,10 +49,12 @@
 }
 
 .embla {
-  height: 100%;
+  overflow: visible;
+  padding-right: rem(50px);
   &_container {
     display: flex;
     gap: rem(50px);
+    will-change: transform;
     touch-action: pan-x pinch-zoom;
   }
 }
