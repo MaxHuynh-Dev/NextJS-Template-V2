@@ -1,3 +1,5 @@
+"use client";
+
 import { Container } from "@Components/Container";
 import SvgInsert from "@Components/SvgInsert";
 import Heading from "@Components/Typo/Heading";
@@ -10,11 +12,24 @@ import {
 	TypoTagLabel,
 	TypoTransform,
 } from "@Enums/typo";
+import type { EmblaCarouselType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
 import type React from "react";
 import styles from "./projects.module.scss";
 import Slide from "./Slide";
+import { usePrevNextButtons } from "./usePrevNextButtons";
 
 function Projects(): React.ReactElement {
+	const [emblaRef, emblaApi] = useEmblaCarousel({
+		// loop: true,
+	});
+	const {
+		prevBtnDisabled,
+		nextBtnDisabled,
+		onPrevButtonClick,
+		onNextButtonClick,
+	} = usePrevNextButtons(emblaApi);
+
 	return (
 		<div className={styles.projects}>
 			<Container>
@@ -41,22 +56,32 @@ function Projects(): React.ReactElement {
 							1/6
 						</Label>
 						<div className={styles.projects_arrows}>
-							<div className={styles.projects_arrow}>
+							<button
+								type="button"
+								className={styles.projects_arrow}
+								onClick={onPrevButtonClick}
+								disabled={prevBtnDisabled}
+							>
 								<SvgInsert src="/icons/arrow-left.svg" width={49} height={49} />
-							</div>
+							</button>
 
-							<div className={styles.projects_arrow}>
+							<button
+								type="button"
+								className={styles.projects_arrow}
+								onClick={onNextButtonClick}
+								disabled={nextBtnDisabled}
+							>
 								<SvgInsert
 									src="/icons/arrow-right.svg"
 									width={49}
 									height={49}
 								/>
-							</div>
+							</button>
 						</div>
 					</div>
 				</div>
 			</Container>
-			<Slide />
+			<Slide emblaRef={emblaRef as unknown as EmblaCarouselType} />
 		</div>
 	);
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import { Container } from "@Components/Container";
 import ImagePlaceHolder from "@Components/ImagePlaceHolder";
 import SvgInsert from "@Components/SvgInsert";
@@ -11,7 +9,7 @@ import {
 	TypoTagParagraph,
 	TypoTransform,
 } from "@Enums/typo";
-import useEmblaCarousel from "embla-carousel-react";
+import type { EmblaCarouselType } from "embla-carousel";
 import type React from "react";
 import styles from "./slide.module.scss";
 
@@ -51,14 +49,34 @@ const PROJECTS = [
 		title: "269 HOUSE",
 		tag: "interior Design",
 	},
+	{
+		id: 6,
+		image:
+			"https://images.unsplash.com/photo-1632935187086-49a9d8027292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1322",
+		title: "269 HOUSE",
+		tag: "interior Design",
+	},
+	{
+		id: 7,
+		image:
+			"https://images.unsplash.com/photo-1632935187086-49a9d8027292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1322",
+		title: "269 HOUSE",
+		tag: "interior Design",
+	},
 ];
 
-function Slide(): React.ReactElement {
-	const [emblaRef, _emblaApi] = useEmblaCarousel();
+function Slide({
+	emblaRef,
+}: {
+	emblaRef: EmblaCarouselType;
+}): React.ReactElement {
 	return (
 		<div className={styles.slider}>
 			<Container>
-				<div className={styles.embla} ref={emblaRef}>
+				<div
+					className={styles.embla}
+					ref={emblaRef as unknown as React.Ref<HTMLDivElement>}
+				>
 					<div className={styles.embla_container}>
 						{PROJECTS.map((project) => (
 							<div className={styles.slider_item} key={project.id}>
