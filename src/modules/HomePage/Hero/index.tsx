@@ -1,6 +1,5 @@
 import PrimaryButton from "@Components/Buttons/PrimaryButton";
 import { Container } from "@Components/Container";
-import ImagePlaceHolder from "@Components/ImagePlaceHolder";
 import Heading from "@Components/Typo/Heading";
 import Paragraph from "@Components/Typo/Paragraph";
 import {
@@ -18,12 +17,15 @@ function Hero(): React.ReactElement {
 	return (
 		<div className={styles.hero}>
 			<div className={styles.hero_background}>
-				<ImagePlaceHolder
+				{/* <ImagePlaceHolder
 					src="/images/hero.jpg"
 					alt="Hero Background"
 					width={1000}
 					height={1000}
-				/>
+				/> */}
+				<video autoPlay muted loop playsInline>
+					<source src="/videos/video.mp4" type="video/mp4" />
+				</video>
 			</div>
 			<Container className={styles.hero_container}>
 				<div className={styles.hero_container_inner}>

@@ -1,3 +1,4 @@
+import Preloader from "@Animation/pages/Preloader";
 import GridDebug from "@Components/GridDebug";
 import LenisScroll from "@Components/ReactLenis";
 import Header from "@Layout/Header";
@@ -11,6 +12,7 @@ export default function MainLayout({
 			<Header />
 			<LenisScroll>{children}</LenisScroll>
 			<GridDebug />
+			<Preloader />
 		</React.Fragment>
 	);
 }
