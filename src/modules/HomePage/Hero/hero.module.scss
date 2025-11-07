@@ -58,8 +58,10 @@
       height: 100%;
       &_italic {
         font-style: italic;
+        mix-blend-mode: difference;
       }
       &_normal {
+        mix-blend-mode: difference;
         font-style: normal;
 
         &:last-child {
