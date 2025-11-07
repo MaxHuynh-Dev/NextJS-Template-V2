@@ -1,7 +1,11 @@
+"use client";
+
+import { useLifeCycle } from "@Animation/context/LifeCycleContext";
 import PrimaryButton from "@Components/Buttons/PrimaryButton";
 import { Container } from "@Components/Container";
 import Heading from "@Components/Typo/Heading";
 import Paragraph from "@Components/Typo/Paragraph";
+import { PageStatus } from "@Constants/animations";
 import {
 	FontWeight,
 	TypoColor,
@@ -10,10 +14,37 @@ import {
 	TypoTagParagraph,
 	TypoTransform,
 } from "@Enums/typo";
+import { useSignalEffect } from "@preact/signals-react";
+import classNames from "classnames";
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
 import type React from "react";
 import styles from "./hero.module.scss";
 
+gsap.registerPlugin(SplitText);
+
 function Hero(): React.ReactElement {
+	const { pageStatus } = useLifeCycle();
+
+	useSignalEffect(() => {
+		if (pageStatus.value === PageStatus.ENTERED) {
+			SplitText.create(".split", {
+				type: "words,lines",
+				linesClass: "line",
+				autoSplit: true,
+				mask: "lines",
+				onSplit: (self) => {
+					const split = gsap.from(self.lines, {
+						duration: 1,
+						yPercent: -100,
+						stagger: 0.1,
+						ease: "expo.out",
+					});
+					return split;
+				},
+			});
+		}
+	});
 	return (
 		<div className={styles.hero}>
 			<div className={styles.hero_background}>
@@ -36,13 +67,21 @@ function Hero(): React.ReactElement {
 						fontWeight={FontWeight.semiBold}
 						color={TypoColor.vani}
 						textTransform={TypoTransform.uppercase}
-						className={styles.hero_heading}
+						className={classNames(styles.hero_heading)}
 					>
-						<span className={styles.hero_heading_word_italic}>We create</span>
-						<div className={styles.hero_heading_word_normal}>
+						<span
+							className={classNames(styles.hero_heading_word_italic, "split")}
+						>
+							We create
+						</span>
+						<div
+							className={classNames(styles.hero_heading_word_normal, "split")}
+						>
 							interiors that one
 						</div>
-						<div className={styles.hero_heading_word_normal}>
+						<div
+							className={classNames(styles.hero_heading_word_normal, "split")}
+						>
 							wants to live in
 						</div>
 					</Heading>

@@ -1,25 +1,34 @@
 "use client";
 
+import { useLifeCycle } from "@Animation/context/LifeCycleContext";
+import { PageStatus } from "@Constants/animations";
+import { useSignalEffect } from "@preact/signals-react";
 import classNames from "classnames";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import styles from "./preloader.module.scss";
 
 function Preloader(): React.ReactElement {
-	const [isLoading, setIsLoading] = useState(true);
+	const { pageStatus, setPageStatus } = useLifeCycle();
+	const ref = useRef<HTMLDivElement>(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
+		setPageStatus(PageStatus.LOADING);
+	});
+
+	useSignalEffect(() => {
 		const timer = setTimeout(() => {
-			setIsLoading(false);
+			pageStatus.value = PageStatus.ENTERED;
+			if (ref.current) {
+				ref.current.style.display = "none";
+			}
 		}, 2000);
 
 		return () => clearTimeout(timer);
-	}, []);
+	});
 
 	return (
-		<div
-			className={classNames(styles.preloader, { [styles.hide]: !isLoading })}
-		>
+		<div ref={ref} className={classNames(styles.preloader)}>
 			<h1>Preloader</h1>
 		</div>
 	);
