@@ -1,8 +1,10 @@
 .slider {
   padding-top: rem(30px);
-  padding-left: rem(50px);
-  width: rem(450px);
+  overflow: hidden;
+
   &_item {
+    flex: 0 0 auto;
+    width: rem(450px);
     display: flex;
     flex-direction: column;
     gap: rem(20px);
@@ -42,5 +44,15 @@
       justify-content: center;
       border-radius: rem(40px);
     }
+  }
+}
+
+.embla {
+  height: 100%;
+  &_container {
+    display: flex;
+    height: 100%;
+    gap: rem(50px);
+    touch-action: pan-x pinch-zoom;
   }
 }
