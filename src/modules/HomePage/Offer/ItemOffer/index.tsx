@@ -7,6 +7,7 @@ import {
 	TypoTagLabel,
 	TypoTransform,
 } from "@Enums/typo";
+import cn from "classnames";
 import type React from "react";
 import styles from "./itemOffer.module.scss";
 
@@ -14,11 +15,17 @@ type TItemOffer = {
 	title: string;
 	image: string;
 	number: number;
+	className?: string;
 };
 
-function ItemOffer({ title, image, number }: TItemOffer): React.ReactElement {
+function ItemOffer({
+	title,
+	image,
+	number,
+	className,
+}: TItemOffer): React.ReactElement {
 	return (
-		<div className={styles.itemOffer}>
+		<div className={cn(styles.itemOffer, className)}>
 			<div className={styles.itemOffer_header}>
 				<Label
 					as={TypoTagLabel.span}

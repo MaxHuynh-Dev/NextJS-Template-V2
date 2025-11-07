@@ -6,6 +6,18 @@
   &_header {
     position: relative;
     display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5rem;
+      background-color: var(--vani);
+      transition: transform 0.3s linear;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
   }
   &:hover {
     .itemOffer_image {
@@ -17,9 +29,12 @@
     .itemOffer_number {
       color: var(--vani);
     }
+    .itemOffer_header::after {
+      transform: scaleX(1);
+    }
   }
   &_title {
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
     text-box: trim-both cap alphabetic;
   }
 
@@ -27,7 +42,7 @@
     position: absolute;
     top: 0.2rem;
     right: -3rem;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 
   &_image {
@@ -38,7 +53,7 @@
     transform: translateY(-50%);
     z-index: 3;
     clip-path: polygon(100% 50%, 0 50%, 0 50%, 100% 50%);
-    transition: clip-path 0.2s linear;
+    transition: clip-path 0.3s linear;
     & img {
       width: 100%;
       height: auto;

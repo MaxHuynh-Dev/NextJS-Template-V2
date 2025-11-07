@@ -3,4 +3,9 @@
   &_items {
     margin-top: rem(30px);
   }
+  &_item {
+    &:last-child {
+      border-bottom: 1px solid var(--dark-grey);
+    }
+  }
 }
