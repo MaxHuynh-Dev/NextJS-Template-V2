@@ -1365,10 +1365,10 @@
   resolved "https://registry.npmjs.org/@preact/signals-core/-/signals-core-1.12.1.tgz"
   integrity sha512-BwbTXpj+9QutoZLQvbttRg5x3l5468qaV2kufh+51yha1c53ep5dY4kTuZR35+3pAZxpfQerGJiQqg34ZNZ6uA==
 
-"@preact/signals-react@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.npmjs.org/@preact/signals-react/-/signals-react-3.3.1.tgz"
-  integrity sha512-VMVDVt2zxtv/uvYBfuaAX1KJPZjpSB23ohbbCAzWAv0J0IXRxyDMSVUirxq1nY6nzeyldAAXJOykAtlVIyQ/jA==
+"@preact/signals-react@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@preact/signals-react/-/signals-react-3.5.0.tgz#2ad648bbcb289f68439895ce833d913c5f0ec5d3"
+  integrity sha512-z4hm3ab9PqGJ81lGTogt57FolE0iE8Z8U0uamgRwB6kcMeSle24CaBIUmSnJKebwOJWjgX6YlMt+lM5zJ+olRw==
   dependencies:
     "@preact/signals-core" "^1.12.0"
     use-sync-external-store "^1.2.0"
