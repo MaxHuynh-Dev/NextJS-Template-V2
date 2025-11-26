@@ -13,9 +13,9 @@ function Header(): React.ReactElement {
     <div className={s.header}>
       <Container>
         <div className={s.header_container}>
-          <div className={s.header_logo}>
+          <Link href="/" className={s.header_logo}>
             <ImagePlaceHolder src="/images/logo.png" alt="Logo" width={148} height={63} />
-          </div>
+          </Link>
           <ul className={s.header_menu}>
             {ROUTER.map((item) => (
               <li key={item.href}>

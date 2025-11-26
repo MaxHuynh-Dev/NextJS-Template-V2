@@ -1,4 +1,5 @@
 'use client';
+import styles from './hero.module.scss';
 
 import PrimaryButton from '@Components/Buttons/PrimaryButton';
 import { Container } from '@Components/Container';
@@ -15,15 +16,13 @@ import {
 import classNames from 'classnames';
 import type React from 'react';
 
-import styles from './hero.module.scss';
+import ImagePlaceHolder from '@Components/ImagePlaceHolder';
 
 function Hero(): React.ReactElement {
   return (
     <div className={styles.hero}>
       <div className={styles.hero_background}>
-        <video autoPlay muted loop playsInline>
-          <source src="/videos/video.mp4" type="video/mp4" />
-        </video>
+        <ImagePlaceHolder src="/images/hero.jpg" alt="Hero Background" width={1000} height={1000} />
       </div>
       <Container className={styles.hero_container}>
         <div className={styles.hero_container_inner}>
