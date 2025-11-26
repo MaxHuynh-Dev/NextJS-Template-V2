@@ -20,17 +20,23 @@ const useWindowResize = (): IDimension => {
   const scrollHeight = useSignal(0);
 
   const listener = (): void => {
+    // eslint-disable-next-line no-param-reassign
     width.value = window.innerWidth || document.body.clientWidth || 0;
+    // eslint-disable-next-line no-param-reassign
     height.value = window.innerHeight || document.body.clientHeight || 0;
+    // eslint-disable-next-line no-param-reassign
     scrollHeight.value = document.body.scrollHeight;
   };
 
   useGSAP((): void => {
+    // eslint-disable-next-line react-compiler/react-compiler
     const resizeObserver = new ResizeObserver((_entries: ResizeObserverEntry[]): void => {
+      // eslint-disable-next-line no-param-reassign
       scrollHeight.value = document.body.scrollHeight;
     });
 
     resizeObserver.observe(document.body);
+    // @ts-expect-error - ResizeObserver is not typed
     return (): void => {
       resizeObserver.unobserve(document.body);
       resizeObserver.disconnect();
@@ -46,6 +52,7 @@ const useWindowResize = (): IDimension => {
     }
 
     window.addEventListener('resize', deBounceListener);
+    // @ts-expect-error - ResizeObserver is not typed
     return (): void => {
       window.removeEventListener('resize', deBounceListener);
     };
