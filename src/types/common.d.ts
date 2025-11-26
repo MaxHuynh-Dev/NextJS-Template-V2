@@ -33,7 +33,7 @@ interface StrapiMedia {
   id: number;
   alternativeText: string | null;
   caption: string | null;
-  ext: string | '.png' | '.jpg' | '.jpeg';
+  ext: '.png' | '.jpg' | '.jpeg' | '.webp';
   width: number;
   height: number;
   mime: string;

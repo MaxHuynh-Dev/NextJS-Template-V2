@@ -1,17 +1,17 @@
-import eslintPlugin from '@eslint/eslintrc'
+import js from '@eslint/js'
 import nextPlugin from '@next/eslint-plugin-next'
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 import reactCompilerPlugin from 'eslint-plugin-react-compiler'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import { defineConfig } from 'eslint/config'
-import tseslintConfigs from 'typescript-eslint/configs'
+import tseslint from 'typescript-eslint'
 
 const eslintConfig = defineConfig([
     {
         name: 'project/javascript-recommended',
         files: ['**/*.{js,mjs,ts,tsx}'],
-        ...eslintPlugin.configs.recommended,
+        ...js.configs.recommended,
     },
 ])
  
@@ -20,8 +20,8 @@ const typescriptConfig = defineConfig([
         name: 'project/typescript-strict',
         files: ['**/*.{ts,tsx,mjs}'],
         extends: [
-            ...tseslintConfigs.strictTypeChecked,
-            ...tseslintConfigs.stylisticTypeChecked,
+            ...tseslint.configs.strictTypeChecked,
+            ...tseslint.configs.stylisticTypeChecked,
         ],
         languageOptions: {
             parserOptions: {
@@ -41,7 +41,7 @@ const typescriptConfig = defineConfig([
     {
         name: 'project/javascript-disable-type-check',
         files: ['**/*.{js,mjs,cjs}'],
-        ...tseslintConfigs.disableTypeChecked,
+        ...tseslint.configs.disableTypeChecked,
     }
 ])
  

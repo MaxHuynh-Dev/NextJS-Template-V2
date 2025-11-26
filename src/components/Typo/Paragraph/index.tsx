@@ -23,7 +23,7 @@ const Paragraph = ({ ...props }: ParagraphProps): React.JSX.Element => {
     ...restProps
   } = props;
 
-  const textClassNames = cn(styles.text, styles[`text__${size}`], className);
+  const textClassNames = cn(styles.text, styles[`text__${String(size)}`], className);
 
   return (
     <BaseText

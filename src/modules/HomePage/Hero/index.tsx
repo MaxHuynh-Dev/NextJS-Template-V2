@@ -34,14 +34,14 @@ function Hero(): React.ReactElement {
         linesClass: 'line',
         autoSplit: true,
         mask: 'lines',
-        onSplit: (self) => {
+        onSplit: (self: SplitText) => {
           const split = gsap.from(self.lines, {
             duration: 1,
             yPercent: -100,
             stagger: 0.1,
             ease: 'expo.out',
           });
-          return split;
+          return void split;
         },
       });
     }
@@ -80,7 +80,8 @@ function Hero(): React.ReactElement {
           </Heading>
           <div className={styles.hero_container_inner_bottom}>
             <Paragraph as={TypoTagParagraph.p} size={18} color={TypoColor.vani}>
-              For more than 30 years, we've been <br /> bringing projects to life around the world.
+              For more than 30 years, we&apos;ve been <br /> bringing projects to life around the
+              world.
             </Paragraph>
             <PrimaryButton text="Explore our work" />
           </div>

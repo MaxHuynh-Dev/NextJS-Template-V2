@@ -35,7 +35,11 @@ function ImagePlaceHolder({
         onLoad={(e) => {
           (e.target as HTMLImageElement).classList.add(s.loaded);
         }}
-        sizes={isFull ? '100vw' : `(min-width: ${width ?? 100}px) ${width ?? 100}px, 100vw`}
+        sizes={
+          isFull
+            ? '100vw'
+            : `(min-width: ${String(width ?? 100)}px) ${String(width ?? 100)}px, 100vw`
+        }
         width={width}
         height={height}
         className={cn(s.imagePlaceHolder_original)}

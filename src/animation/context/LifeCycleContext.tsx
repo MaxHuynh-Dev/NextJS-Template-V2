@@ -1,12 +1,12 @@
 'use client';
 
 import { PageStatus } from '@Constants/animations';
-import { signal } from '@preact/signals-react';
+import { Signal, signal } from '@preact/signals-react';
 import type React from 'react';
 import { createContext, use } from 'react';
 
 interface LifeCycleContextReturn {
-  pageStatus: typeof pageStatusSignal;
+  pageStatus: Signal<PageStatus | undefined>;
   setPageStatus: (status: PageStatus) => void;
   resetPageStatus: () => void;
 }
@@ -21,6 +21,7 @@ export interface LifeCycleProviderProp {
 
 export function LifeCycleProvider({ children }: LifeCycleProviderProp): React.ReactElement {
   const setPageStatus = (status: PageStatus): void => {
+    // eslint-disable-next-line react-compiler/react-compiler
     pageStatusSignal.value = status;
   };
 

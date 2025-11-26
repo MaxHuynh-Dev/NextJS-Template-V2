@@ -54,11 +54,11 @@ function About(): React.ReactElement {
               <br />
               High standards of quality, creativity of ideas, absolute mastery of the regulatory
               framework, responsibility for the executed projects - all this enables the client to
-              trust us. We are focused on satisfying the client's design needs, integrating them
-              into the creative process of architectural design, interior design and other sections
-              of the project. We are expanding the range of activities of our architectural company,
-              to achieve a balance in the system of "ideas and implementation." Our team consists of
-              architects, designers and engineers from different areas.
+              trust us. We are focused on satisfying the client&apos;s design needs, integrating
+              them into the creative process of architectural design, interior design and other
+              sections of the project. We are expanding the range of activities of our architectural
+              company, to achieve a balance in the system of &quot;ideas and implementation.&quot;
+              Our team consists of architects, designers and engineers from different areas.
             </Paragraph>
             <div className={styles.about_right_items}>
               <div className={styles.about_right_items_item}>

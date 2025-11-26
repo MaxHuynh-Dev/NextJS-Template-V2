@@ -1,5 +1,3 @@
-/* eslint-disable regexp/no-unused-capturing-group, regexp/no-super-linear-backtracking, regexp/no-misleading-capturing-group, security/detect-unsafe-regex */
-
 class Validate {
   isEmail(email: string): boolean {
     return /^[\w.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
@@ -25,5 +23,3 @@ class Validate {
 }
 
 export const validateHelper = new Validate();
-
-/* eslint-enable regexp/no-unused-capturing-group, regexp/no-super-linear-backtracking, regexp/no-misleading-capturing-group, security/detect-unsafe-regex */

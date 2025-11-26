@@ -13,7 +13,7 @@ interface Props {
 }
 
 function Slide({ direction = 'forward', imgs }: Props): React.ReactElement {
-  const [emblaRef, _emblaApi] = useEmblaCarousel(
+  const [emblaRef] = useEmblaCarousel(
     {
       loop: true,
       axis: 'y',

@@ -22,10 +22,9 @@ class StringHelper {
       'YỲỶỸÝỴ',
     ];
     let result: string = str;
-    for (let i = 0; i < AccentsMap.length; i++) {
-      // eslint-disable-next-line security/detect-non-literal-regexp
-      const re = new RegExp(`[${AccentsMap[i].substring(1)}]`, 'g');
-      const char = AccentsMap[i][0];
+    for (const accentMap of AccentsMap) {
+      const re = new RegExp(`[${accentMap.substring(1)}]`, 'g');
+      const char = accentMap[0];
 
       result = result.replace(re, char).toUpperCase();
     }

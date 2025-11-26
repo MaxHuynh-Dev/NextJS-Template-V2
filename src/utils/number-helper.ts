@@ -2,7 +2,7 @@ class NumberHelper {
   calculateRem(px: number, base = 10): string {
     const newPx = px * 1;
     const newBase = base * 1;
-    return `${newPx / newBase}rem`;
+    return `${(newPx / newBase).toFixed(2)}rem`;
   }
 
   getRandomInt(min: number, max: number): number {
