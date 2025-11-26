@@ -48,7 +48,6 @@ export default function GridDebug(): React.ReactElement {
     };
   }, [handleKeyDown]);
 
-  console.log('isGrid', isGrid);
   return (
     <Activity mode={isGrid ? 'visible' : 'hidden'} name="Grid Debug">
       <div className={cn(s.gridDebug)}>

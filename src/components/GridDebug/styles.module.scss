@@ -21,7 +21,7 @@ $color-debug: #ff6b4c;
 
     &::before {
       background-color: rgba($color-debug, 0.3);
-      content: "";
+      content: '';
       height: 100%;
       left: 0;
       position: absolute;
@@ -30,15 +30,11 @@ $color-debug: #ff6b4c;
 
     &::after {
       background-color: rgba($color-debug, 0.3);
-      content: "";
+      content: '';
       height: 100%;
       right: 0;
       position: absolute;
       width: 1px;
     }
   }
-}
-
-.hidden {
-  display: none;
 }

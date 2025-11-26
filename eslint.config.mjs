@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
         name: 'project/javascript-recommended',
         files: ['**/*.{js,mjs,ts,tsx}'],
         ...js.configs.recommended,
+        rules: {
+            ...js.configs.recommended.rules,
+            'no-console': 'warn',
+        },
     },
 ])
  
