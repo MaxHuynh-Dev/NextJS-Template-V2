@@ -1,4 +1,4 @@
-type StrapiHeader = {
-	logoWhite: StrapiMedia;
-	logoDark: StrapiMedia;
-};
+interface StrapiHeader {
+  logoWhite: StrapiMedia;
+  logoDark: StrapiMedia;
+}

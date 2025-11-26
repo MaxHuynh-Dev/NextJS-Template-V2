@@ -8,7 +8,7 @@
     "start": "next start",
     "prepare": "husky",
     "format": "prettier --write .",
-    "lint": "next lint",
+    "lint": "eslint .",
     "check": "tsc --noEmit"
   },
   "dependencies": {
@@ -37,6 +37,10 @@
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint-react/eslint-plugin": "^2.3.7",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.39.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -45,11 +49,18 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.4",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react-compiler": "^19.1.0-rc.2",
+    "eslint-plugin-regexp": "^2.10.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.3.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.48.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

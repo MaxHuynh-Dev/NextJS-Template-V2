@@ -1,7 +1,7 @@
-type StrapiMenu = {
-	links: StrapiAnchor[];
-};
+interface StrapiMenu {
+  links: StrapiAnchor[];
+}
 
-type StrapiSocial = {
-	links: StrapiAnchor[];
-};
+interface StrapiSocial {
+  links: StrapiAnchor[];
+}

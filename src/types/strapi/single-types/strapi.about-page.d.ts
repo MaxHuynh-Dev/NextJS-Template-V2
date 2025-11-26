@@ -1,20 +1,20 @@
-type StrapiAboutPage = {
-	heroSection: StrapiHeroWithImageSection;
+interface StrapiAboutPage {
+  heroSection: StrapiHeroWithImageSection;
 
-	ourTeamTitle: string;
-	ourTeamDescription: string;
-	ourTeamImage: StrapiMedia;
+  ourTeamTitle: string;
+  ourTeamDescription: string;
+  ourTeamImage: StrapiMedia;
 
-	ourStoryTitle: string;
-	ourStoryDescription: string;
-	ourStoryImage: StrapiMedia;
+  ourStoryTitle: string;
+  ourStoryDescription: string;
+  ourStoryImage: StrapiMedia;
 
-	parallaxImage: StrapiMedia;
+  parallaxImage: StrapiMedia;
 
-	teamSectionTitle: string;
-	teamMembers: {
-		data: StrapiMember[];
-	};
+  teamSectionTitle: string;
+  teamMembers: {
+    data: StrapiMember[];
+  };
 
-	seo: StrapiSeo;
-};
+  seo: StrapiSeo;
+}

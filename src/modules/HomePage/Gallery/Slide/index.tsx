@@ -1,45 +1,41 @@
-"use client";
+'use client';
 
-import ImagePlaceHolder from "@Components/ImagePlaceHolder";
-import AutoScroll from "embla-carousel-auto-scroll";
-import useEmblaCarousel from "embla-carousel-react";
-import type React from "react";
-import styles from "./slide.module.scss";
+import ImagePlaceHolder from '@Components/ImagePlaceHolder';
+import AutoScroll from 'embla-carousel-auto-scroll';
+import useEmblaCarousel from 'embla-carousel-react';
+import type React from 'react';
 
-type Props = {
-	direction?: "forward" | "backward";
-	imgs: string[];
-};
+import styles from './slide.module.scss';
 
-function Slide({ direction = "forward", imgs }: Props): React.ReactElement {
-	const [emblaRef, _emblaApi] = useEmblaCarousel(
-		{
-			loop: true,
-			axis: "y",
-		},
-		[
-			AutoScroll({
-				direction,
-			}),
-		],
-	);
+interface Props {
+  direction?: 'forward' | 'backward';
+  imgs: string[];
+}
 
-	return (
-		<div className={styles.embla} ref={emblaRef}>
-			<div className={styles.embla_container}>
-				{imgs.map((img) => (
-					<div className={styles.embla_slide} key={img}>
-						<ImagePlaceHolder
-							src={img}
-							alt="Gallery"
-							width={1000}
-							height={1000}
-						/>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+function Slide({ direction = 'forward', imgs }: Props): React.ReactElement {
+  const [emblaRef, _emblaApi] = useEmblaCarousel(
+    {
+      loop: true,
+      axis: 'y',
+    },
+    [
+      AutoScroll({
+        direction,
+      }),
+    ]
+  );
+
+  return (
+    <div className={styles.embla} ref={emblaRef}>
+      <div className={styles.embla_container}>
+        {imgs.map((img) => (
+          <div className={styles.embla_slide} key={img}>
+            <ImagePlaceHolder src={img} alt="Gallery" width={1000} height={1000} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Slide;

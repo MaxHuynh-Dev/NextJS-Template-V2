@@ -1,6 +1,6 @@
-type StrapiCTASection = {
-	title: string;
-	description: string;
-	button: StrapiAnchor;
-	background: StrapiMedia;
-};
+interface StrapiCTASection {
+  title: string;
+  description: string;
+  button: StrapiAnchor;
+  background: StrapiMedia;
+}
