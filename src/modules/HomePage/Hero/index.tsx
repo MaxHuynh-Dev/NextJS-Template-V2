@@ -1,11 +1,9 @@
 'use client';
 
-import { useLifeCycle } from '@Animation/context/LifeCycleContext';
 import PrimaryButton from '@Components/Buttons/PrimaryButton';
 import { Container } from '@Components/Container';
 import Heading from '@Components/Typo/Heading';
 import Paragraph from '@Components/Typo/Paragraph';
-import { PageStatus } from '@Constants/animations';
 import {
   FontWeight,
   TypoColor,
@@ -14,7 +12,6 @@ import {
   TypoTagParagraph,
   TypoTransform,
 } from '@Enums/typo';
-import { useSignalEffect } from '@preact/signals-react';
 import classNames from 'classnames';
 import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
@@ -25,27 +22,6 @@ import styles from './hero.module.scss';
 gsap.registerPlugin(SplitText);
 
 function Hero(): React.ReactElement {
-  const { pageStatus } = useLifeCycle();
-
-  useSignalEffect(() => {
-    if (pageStatus.value === PageStatus.ENTERED) {
-      SplitText.create('.split', {
-        type: 'words,lines',
-        linesClass: 'line',
-        autoSplit: true,
-        mask: 'lines',
-        onSplit: (self: SplitText) => {
-          const split = gsap.from(self.lines, {
-            duration: 1,
-            yPercent: -100,
-            stagger: 0.1,
-            ease: 'expo.out',
-          });
-          return void split;
-        },
-      });
-    }
-  });
   return (
     <div className={styles.hero}>
       <div className={styles.hero_background}>
