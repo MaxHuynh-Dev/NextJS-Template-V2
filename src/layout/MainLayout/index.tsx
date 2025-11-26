@@ -1,5 +1,5 @@
 import Preloader from '@Animation/pages/Preloader';
-// import GridDebug from '@Components/GridDebug';
+import GridDebug from '@Components/GridDebug';
 import LenisScroll from '@Components/ReactLenis';
 import Header from '@Layout/Header';
 import type { PropsWithChildren } from 'react';
@@ -10,7 +10,7 @@ export default function MainLayout({ children }: PropsWithChildren): React.React
     <React.Fragment>
       <Header />
       <LenisScroll>{children}</LenisScroll>
-      {/* <GridDebug /> */}
+      <GridDebug />
       <Preloader />
     </React.Fragment>
   );

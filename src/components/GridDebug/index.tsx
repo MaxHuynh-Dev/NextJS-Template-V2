@@ -3,7 +3,7 @@
 import { Container, GridContainer } from '@Components/Container';
 import cn from 'classnames';
 import type React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import { Activity, useCallback, useEffect, useState } from 'react';
 
 import s from './styles.module.scss';
 
@@ -14,12 +14,7 @@ const GridColumn = (): React.ReactElement => (
 );
 
 export default function GridDebug(): React.ReactElement {
-  const [isGrid, setIsGrid] = useState<boolean>(() => {
-    if (typeof window === 'undefined') {
-      return false;
-    }
-    return localStorage.getItem('isGrid') === 'true';
-  });
+  const [isGrid, setIsGrid] = useState<boolean>(false);
 
   const handleKeyDown: (ev: KeyboardEvent) => void = useCallback(
     (ev: KeyboardEvent) => {
@@ -35,21 +30,36 @@ export default function GridDebug(): React.ReactElement {
   );
 
   useEffect(() => {
+    const storedValue = localStorage.getItem('isGrid');
+    if (storedValue !== null) {
+      const initialIsGrid: boolean = storedValue === 'true';
+      if (initialIsGrid !== isGrid) {
+        setTimeout(() => {
+          setIsGrid(initialIsGrid);
+        }, 0);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
     return (): void => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [handleKeyDown]);
 
+  console.log('isGrid', isGrid);
   return (
-    <div className={cn(s.gridDebug, !isGrid && s.hidden)}>
-      <Container>
-        <GridContainer>
-          {Array.from({ length: 12 }).map((_, index) => (
-            <GridColumn key={`grid-column-${index.toString()}`} />
-          ))}
-        </GridContainer>
-      </Container>
-    </div>
+    <Activity mode={isGrid ? 'visible' : 'hidden'} name="Grid Debug">
+      <div className={cn(s.gridDebug)}>
+        <Container>
+          <GridContainer>
+            {Array.from({ length: 12 }).map((_, index) => (
+              <GridColumn key={`grid-column-${index.toString()}`} />
+            ))}
+          </GridContainer>
+        </Container>
+      </div>
+    </Activity>
   );
 }
