@@ -15,7 +15,14 @@ export const pageVariants: Variants = {
     opacity: 1,
     x: 0,
     filter: 'blur(0px)',
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut', // 🌟 QUAN TRỌNG:
+      // Khi Page bắt đầu 'enter', nó sẽ đợi 0.5s (khi nền đã hiện)
+      // rồi mới bắt đầu ra lệnh cho các children (MaskText) chạy 'enter'
+      delayChildren: 0.5,
+      staggerChildren: 0.1,
+    },
   },
   exit: {
     opacity: 0,
